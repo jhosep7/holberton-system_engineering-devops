@@ -1,0 +1,2 @@
+#!/bin/bash
+chown betty:holberton dir0 dir1 dir2 dir_holberton hello
