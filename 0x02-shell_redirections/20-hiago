@@ -1,2 +1,2 @@
 #!/bin/bash
-sed -e 's/c//g' -e 's/C//g'
+tr -d c|tr -d C
