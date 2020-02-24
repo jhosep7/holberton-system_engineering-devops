@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # Script that loops from 1 to 10 and:
 Hour=0
-while [ $Hour -le 12 ]; do
+while (( $Hour <= 12 )); do
     echo "Hour:" $Hour
     Minutes=1
-    while [ $Minutes -le 59 ]; do
+    while (( $Minutes <= 59 )); do
 	echo $Minutes
 	let Minutes+=1
     done
