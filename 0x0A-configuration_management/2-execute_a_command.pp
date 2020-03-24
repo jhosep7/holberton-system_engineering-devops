@@ -1,3 +1,2 @@
 #manifest that kills a process named killmenow.
-
-exec {'killmenow': command => '/usr/bin/pkill -f killmenow'}
+exec {'/usr/bin/env pkill -9 killmenow'}
