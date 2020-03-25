@@ -4,4 +4,4 @@
 apt-get -y update
 apt-get -y install nginx
 echo "Holberton School" | tee /var/www/html/index.html
-sudo service nginx start
+service nginx start
