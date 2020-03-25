@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#Redirection 301
+
+URL=/etc/nginx/sites-available/default
+TEXT="location /redirect_me {\n return 301 https://www.youtube.com;\n}\n"
+
+sudo apt-get -y update
+sudo apt-get -y install nginx
+echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
+sudo sed -i "37i $TEXT" $URL
+sudo service nginx stop
+sudo service nginx start
