@@ -2,8 +2,8 @@
 #Not found page 404
 sudo apt-get -y update
 sudo apt-get -y install nginx
-echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
+echo "Holberton School" | sudo tee /var/www/html/index.nginx-debian.html
 sudo sed -i "/server_name _;/ a\\\trewrite ^/redirect_me https://www.youtube.com permanent;" /etc/nginx/sites-available/default
 sudo sed -i "/redirect_me/ a\\\terror_page 404 /custom_404.html;" /etc/nginx/sites-available/default
-echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/custom_404.html
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html
 sudo service nginx start
