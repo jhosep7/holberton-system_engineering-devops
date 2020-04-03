@@ -11,8 +11,9 @@ frontend load_balancer
     default_backend betty
 
 backend betty
+    mode http
     balance roundrobin
     server 1149-web-01 35.227.16.88:80 check
     server 1149-web-02 54.144.228.69:80 check
 " | sudo tee -a /etc/haproxy/haproxy.cfg
-sudo service haproxy start
+sudo service haproxy restart
