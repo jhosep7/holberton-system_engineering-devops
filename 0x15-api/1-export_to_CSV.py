@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """xport data in the CSV format"""
-from csv import writer, QUOTE_ALL
-from sys import argv
-import requests
 import csv
+from csv import writer, QUOTE_ALL
+import requests
+from sys import argv
 
 
 if __name__ == "__main__":
