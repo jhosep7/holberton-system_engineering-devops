@@ -10,8 +10,7 @@ if __name__ == "__main__":
     ReqT = requests.get("https://jsonplaceholder.typicode.com/todos").json()
     MyDict = {}
     for i in N:
-        Name = [j for j in ReqT
-                      if j.get('userId') == i.get('id')]
+        Name = [j for j in ReqT if j.get('userId') == i.get('id')]
         Name = [{'username': i.get('username'), 'task': j.get('title'),
                  'completed': j.get('completed')} for j in Name]
         MyDict[str(i.get('id'))] = Name
