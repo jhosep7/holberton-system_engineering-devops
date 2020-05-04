@@ -11,9 +11,9 @@ if __name__ == "__main__":
                      format(Id)).json()
     ReqT = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'.
                         format(Id)).json()
-    Task = [i.get('title') for i in ReqT if i.get('completed') is True]
     VarN = N.get('name')
+    ReqForm = [i for i in ReqT if i.get('userId') == N.get('id')]
+    DoneT = [i for i in ReqForm if i.get('completed')]
     print("Employee {} is done with tasks({}/{}):".
-          format(VarN, len(Task), len(ReqT)))
-    for i in ReqT:
-        print("\t {}".format(i))
+          format(VarN, len(DoneT), len(ReqForm)))
+    [print('\t', i.get('title')) for i in DoneT]
