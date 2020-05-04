@@ -9,17 +9,11 @@ if __name__ == "__main__":
     N = requests.get("https://jsonplaceholder.typicode.com/users").json()
     ReqT = requests.get("https://jsonplaceholder.typicode.com/todos").json()
     MyDict = {}
-    Name = {}
     for i in N:
-        Id = i.get("id")
-        MyDict[Id] = []
-        Name[Id] = i.get('username')
-    for j in ReqT:
-        Act = {}
-        Id = j.get('userId')
-        Act['task'] = j.get('title')
-        Act['completed'] = j.get('completed')
-        Act['username'] = Name.get(Id)
-        MyDict.get(Id).append(Act)
+        Name = [j for j in ReqT
+                      if j.get('userId') == i.get('id')]
+        Name = [{'username': i.get('username'), 'task': j.get('title'),
+                 'completed': j.get('completed')} for j in Name]
+        MyDict[str(i.get('id'))] = Name
     with open("todo_all_employees.json", 'w') as JSONfile:
         json.dump(MyDict, JSONfile)
