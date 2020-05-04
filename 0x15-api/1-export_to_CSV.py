@@ -8,7 +8,7 @@ import csv
 
 if __name__ == "__main__":
     """export CSV"""
-    Id = int(argv[1])
+    Id = argv[1]
     N = requests.get("https://jsonplaceholder.typicode.com/users/{}".
                      format(Id)).json()
     ReqT = requests.get("https://jsonplaceholder.typicode.com/todos?userId={}".
