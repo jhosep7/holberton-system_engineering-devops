@@ -11,4 +11,4 @@ def top_ten(subreddit):
     Info = Req.json().get('data', {}).get('children', {})
     if 'data' not in Req.json() or Req.status_code != 200:
         return (print(None))
-    [print(i.get('data', {}).get('title')) for i in Info]
+    [print(i.get('data', {}).get('title')) for i in Info[0:11]]
