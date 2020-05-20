@@ -1,1 +1,9 @@
-{"title":"jose's Timeboard 19 May 2020 17:36","description":"","widgets":[{"id":2033961974988904,"definition":{"type":"group","layout_type":"ordered","widgets":[{"id":4205592142427828,"definition":{"type":"hostmap","requests":{"fill":{"q":"top(avg:system.cpu.user{*} by {service}, 10, 'mean', 'desc')"}},"title":"Avg of system.cpu.user over * by service","node_type":"host"}},{"id":2078252595067784,"definition":{"type":"query_value","requests":[{"q":"avg:system.cpu.user{*} by {service}","aggregator":"avg"}],"title":"Avg of system.cpu.user over * by service","precision":2}}],"title":"New group"}},{"id":138174417045348,"definition":{"type":"timeseries","requests":[{"q":"avg:system.io.r_s{*}","display_type":"line","style":{"palette":"dog_classic","line_type":"solid","line_width":"normal"}}],"yaxis":{"label":"","scale":"linear","min":"auto","max":"auto","include_zero":true},"title":"Avg of system.io.r_s over *","show_legend":false,"legend_size":"0"}},{"id":6596414897098934,"definition":{"type":"timeseries","requests":[{"q":"avg:system.io.w_s{*}","display_type":"line","style":{"palette":"dog_classic","line_type":"solid","line_width":"normal"}}],"yaxis":{"label":"","scale":"linear","min":"auto","max":"auto","include_zero":true},"title":"Avg of system.io.w_s over *","show_legend":false,"legend_size":"0"}}],"template_variables":[],"layout_type":"ordered","is_read_only":false,"notify_list":[],"id":"9pb-c3a-qwz"}
+{'dashboards':
+[{'created_at': '2020-05-19T22:36:28.613749+00:00',
+'author_handle': 'jodia.ms@outlook.com',
+'is_read_only': False, 'description': '',
+'title': "jose's Timeboard 19 May 2020 17:36",
+'url': '/dashboard/9pb-c3a-qwz/joses-timeboard-19-may-2020-1736',
+'layout_type': 'ordered',
+'modified_at': '2020-05-19T23:20:01.946611+00:00',
+'id': '9pb-c3a-qwz'}]}
